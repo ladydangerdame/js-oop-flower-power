@@ -532,7 +532,7 @@ var Daisy = Object.create(Flower, {
 Object.create() explicit method,
 you may use a factory function: */
 
-function flowerFactory(name, numPetals, color, seasonality) {
+function FlowerFactory(name, numPetals, color, seasonality) {
 	var flower = Object.create(Flower);
 	flower.name = name;
 	flower.numPetals = numPetals;
@@ -541,7 +541,7 @@ function flowerFactory(name, numPetals, color, seasonality) {
 	return flower;
 }
 
-var Tulip = flowerFactory("tulip", 6, "red", "annual");
+var Tulip = FlowerFactory("tulip", 6, "red", "annual");
 
 
 ```
