@@ -486,9 +486,9 @@ Flower.prototype.bloom = function() {
     return "A " + this.color + " " + this.name " has " + this.numPetals.toString() + " petals."
 };
 
-var Daisy = new Flower("daisy", 34, "white and yellow", "perrenial");
+var daisy = new Flower("daisy", 34, "white and yellow", "perrenial");
 
-var Tulip = new Flower("tulip", 6, "red", "annual");
+var tulip = new Flower("tulip", 6, "red", "annual");
 ```
 
  <details><summary>What do you notice?</summary>
@@ -541,7 +541,7 @@ function FlowerFactory(name, numPetals, color, seasonality) {
 	return flower;
 }
 
-var Tulip = FlowerFactory("tulip", 6, "red", "annual");
+var tulip = FlowerFactory("tulip", 6, "red", "annual");
 
 
 ```
