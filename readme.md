@@ -5,7 +5,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-#Flower Power: Object Oriented Programming in JavaScript
+# Flower Power: Object Oriented Programming in JavaScript
 
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
@@ -29,7 +29,7 @@ Object oriented programming is a common pattern throughout many languages. Its p
 - Create and manipulate JavaScript objects 
 - Write and interpret JavaScript functions
 
-###Constructors
+### Constructors
 For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with our cohort's `data`.  This is known as a *Literal* object definition.  
 
 Here's a flower using the *Literal* method:
@@ -120,7 +120,7 @@ That's more like it!  To change the value of the lily object properties, we simp
 
 <img src="https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg" width="50%" alt="yellow lily">
 
-###Object Methods
+### Object Methods
 One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love `Array` methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all methods of the `Array` object.  We use arrays so much that Javascript gives us the shorthand `[]` syntax to create them instead of calling the `Array` constructor with `new` to make instances, like we did above with the flowers.  Thanks, Javascript!
 
 Lets make a simple method in the flower constructor that outputs to the console whenever we call it.
@@ -151,7 +151,7 @@ sunflower.bloom();
 
 There's an issue with  code above. We're creating multiple flowers, but the attributes `color`, `petal`, and `smells` all start with the same values. It makes sense for these properties to be different and customizable for each flower. 
 
-###Independent Practice: Customization
+### Independent Practice: Customization
 
 Wouldn't it be nice if at the moment we instantiate a flower we could also define its properties? Refactor the `Flower` constructor to enable this code:
 
@@ -223,7 +223,7 @@ function Flower(options) {
 
 
 
-##Prototypes
+## Prototypes
 
 Flowers can now be created with unique attributes, which is awesome. On the other hand, you may notice that all flowers could share the `bloom` method. Right now, though, each flower instance has a separate bloom method.
 
@@ -261,14 +261,14 @@ var rose = new Flower();
 lily.bloom === rose.bloom // true
 ```
 
-####Benefits
+#### Benefits
 
 - Less wasted memory
 - Single source of truth
 
 >What if we edit the prototype *after* the flower instances have been created? Will they update their behavior accordingly?
 
-####More methods
+#### More methods
 
 Let's add some more methods to the flower constructor.
 
@@ -296,11 +296,11 @@ Flower.prototype.describe = function() {
 ```
 Methods can also access properties within the object with the `this` identifier rather than using dot or bracket notation.
 
-####Check for Understanding: `wilt` and `water`
+#### Check for Understanding: `wilt` and `water`
 - Create a `wilt()` method that decrements a flower's petal count by one. :(
 - Create a `water()` method that increments a flower's petal count by one. :)
 
-###Independent Practice: Modeling Flowers
+### Independent Practice: Modeling Flowers
 
 Take 10 minutes to create a flower instance based on the flower on your table. Decide amongst your
 tablemates the type of flower, the flower's main color, number of petals, and whether or not it smells pretty. Think up some other possible properties or methods and add them too!
@@ -394,7 +394,7 @@ var rily = Flower.crossPollinate(rose, lily);
 <!--If we are consistent botanists, our objects will have the same methods and properties.-->
 <!--Share your team's flower object on slack, and we will all be able to include all the flowers in our Parade of Flowers website!-->
 
-###Constructor and Prototype Review
+### Constructor and Prototype Review
 
 **Constructors**
 
@@ -464,7 +464,7 @@ var rily = Flower.crossPollinate(rose, lily);
 
 1. Feel free to add more properties or methods for your `Vase` object type.
 
-###Protoypal vs Pseudo-Classical Inheritance
+### Protoypal vs Pseudo-Classical Inheritance
 
 So far, we have talked mostly about what is considered _pseudo-classical inheritance_ when we extend properties of an object or class to a new instance. This is called _pseudo-classical_ for JavaScript because it mimics the structure of inheritance in more traditional class-based languages such as Java or C++.
 
@@ -555,7 +555,7 @@ var tulip = FlowerFactory("tulip", 6, "red", "annual");
 
 So which should you use? The answer is a matter of opinion. Here is one popular [StackOverflow post](http://stackoverflow.com/questions/2800964/benefits-of-prototypal-inheritance-over-classical) on the matter.
 
-###Independent Practice
+### Independent Practice
 
 * _Discuss:_ What are the relative merits and drawbacks of each type of inheritance in JavaScript? Make a pro's and con's list for each.
 
@@ -563,7 +563,7 @@ So which should you use? The answer is a matter of opinion. Here is one popular 
 
 
 
-###Closing Thoughts
+### Closing Thoughts
 
 * Why is using a prototype beneficial?
 * Would you typically put the methods or attributes in the prototype?
